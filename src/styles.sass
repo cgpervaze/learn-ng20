@@ -1,3 +1,4 @@
+@use '_theme-colors.scss' as theme-colors
 @use '@angular/material' as mat
 
 body
@@ -9,7 +10,14 @@ html
     height: 100%
     color-scheme: light dark
     @include mat.theme((
-        color: mat.$azure-palette,
+        color: (
+        theme-type: light,
+        primary: theme-colors.$primary-palette,
+        tertiary: theme-colors.$tertiary-palette,
+      ),
         typography: Roboto,
         density: 0
     ));
+
+:root
+  --mat-toolbar-container-background: #1976d2 // Use your desired color
