@@ -7,9 +7,9 @@
   </button>
 </app-page-header>
 
-<button class="action" matButton="elevated" (click)="addColumn()"> Add column </button>
-<button class="action" matButton="elevated" (click)="removeColumn()"> Remove column </button>
-<button class="action" matButton="elevated" (click)="shuffle()"> Shuffle </button>
+<button class="table-action" matButton="elevated" (click)="addColumn()"> Add column </button>
+<button class="table-action" matButton="elevated" (click)="removeColumn()"> Remove column </button>
+<button class="table-action" matButton="elevated" (click)="shuffle()"> Shuffle </button>
 
 <table mat-table [dataSource]="data" class="mat-elevation-z8">
   @for (column of displayedColumns; track column) {
